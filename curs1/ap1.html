@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Metoda 1 de a crea obiecte</h1>
+    <script>
+const masina = {
+    nume: 'Dacia',
+    model: 'Logan',
+    motor: [1.1, 1.4],
+    an: {versiunea1:1990, versiunea2:2000},
+    culoare: 'Alb',
+    nrUsi: 4,
+    electric: false,
+    viteza: 180,
+    stop: function (){
+        masina.viteza=0;
+        // sau mergea scris this.viteza=0
+        console.log(`Masina s-a oprit! Viteza este ${masina.viteza}`)
+    }
+}
+masina.nume= 'Audi';
+console.log (masina);
+console.log (masina.nume, masina.culoare, masina.model);
+console.log (masina.culoare);
+console.log (masina.an.versiunea2);
+console.log (masina.an['versiunea2']);
+console.log (masina.motor[1]);
+masina.stop();
+// asa apelam functia
+console.log (masina.nrUsi--)
+// cand trecem -- la final, intai afiseaza si apoi scade
+// cand trecem -- la inceput, intai scade si afiseaza
+
+
+    </script>
+</body>
+</html>
