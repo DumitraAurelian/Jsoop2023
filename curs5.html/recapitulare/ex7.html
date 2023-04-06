@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle{
+            constructor(type, colour, brand, productionYear){
+                this._type=type;
+                this._colour=colour;
+                this._brand=brand;
+                this._productionYear=productionYear;
+            }
+            get type(){
+                console.log('Sunt in getter type')
+                return this._type;
+            }
+            set type(value){
+                console.log('Sunt in setter de type');
+                this._type=value;
+            }
+            info(){
+                return `Acest vehicul este o${this._type}, are culoarea ${this._colour}, construita de ${this._brand} in anul ${this._productionYear}`;
+                //in cazul in care avem alt mesaj in functie fata de "console.log", atunci cand apelam functia, o apelam in console.log: console.log(info()).
+            }
+            start(){
+                console.log(`${this._type} a pornit`);
+            }
+            stop(){
+                console.log(`${this._type} s-a oprit`);
+            }
+            pickUpPassengers(){
+                console.log (`${this._type} poate lua pana la 3 pasageri`);
+            }
+            dropOffPassenger(){
+                console.log ('Toti pasagerii vor cobori in orasul Bucuresti');
+            }
+
+        };
+        const vehicle1= new Vehicle ('car', 'red', 'Ford', 2015);
+        vehicle1.type;
+        vehicle1.type='Bicicleta';
+        vehicle1.start();
+        console.log(vehicle1.info());
+
+
+    </script>
+</body>
+</html>
